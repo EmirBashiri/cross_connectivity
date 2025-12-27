@@ -5,8 +5,8 @@ import 'package:flutter/widgets.dart';
 /// [Stream] and [Connectivity.onConnectivityChanged] [Stream].
 typedef ConnectivityWidgetBuilder = Widget Function(
   BuildContext context,
-  bool? isConnected,
-  ConnectivityStatus? status,
+  bool isConnected,
+  ConnectivityStatus status,
 );
 
 /// Widget that builds itself based on the latest snapshot of interaction with
@@ -45,10 +45,9 @@ class ConnectivityBuilder extends StatelessWidget {
   /// given by [builder].
   ///
   /// The [builder] must not be null.
-  ConnectivityBuilder({
-    super.key,
-    required this.builder,
-  }) : _connectivity = Connectivity();
+  ConnectivityBuilder({Key key, this.builder})
+      : _connectivity = Connectivity(),
+        super(key: key);
 
   final Connectivity _connectivity;
 

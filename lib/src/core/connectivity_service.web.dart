@@ -33,13 +33,13 @@ class ConnectivityService extends ConnectivityServiceInterface {
     if (ConnectivitySettings.enablePolling) {
       /// [NetworkInformation] could be null due to incompatiability with Safari and IE.
       _subscription = html.window.navigator.connection?.onChange
-          .listen((_) => update(html.window.navigator.onLine == true));
+          ?.listen((_) => update(html.window.navigator.onLine == true));
     }
 
     update(html.window.navigator.onLine == true);
   }
 
-  StreamSubscription? _subscription;
+  StreamSubscription _subscription;
 
   /// Gets [ConnectivityStatus] from `Window.Navigator.NetworkInformation.type`.
   ///

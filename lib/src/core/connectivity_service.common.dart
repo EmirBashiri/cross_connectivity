@@ -34,7 +34,7 @@ class ConnectivityService extends ConnectivityServiceInterface
     lookupPolling();
   }
 
-  StreamSubscription? _subscription;
+  StreamSubscription _subscription;
   final _connectivity = Connectivity();
 
   /// Fires whenever the connection state changes.

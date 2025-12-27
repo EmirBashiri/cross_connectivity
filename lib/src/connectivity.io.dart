@@ -24,10 +24,10 @@ class Connectivity implements BaseConnectivityServiceInterface {
       }
     }
 
-    return _singleton!;
+    return _singleton;
   }
   const Connectivity._(this._connectivityService);
-  static Connectivity? _singleton;
+  static Connectivity _singleton;
 
   final ConnectivityServiceInterface _connectivityService;
 
