@@ -12,7 +12,7 @@ dependencies:
 
   meta: ^1.7.0
   http: ^0.13.1
-  rxdart: ^0.28.0
+  rxdart: ^0.26.0
   connectivity_plus:
      git:
        url: https://github.com/emirbashiri/connectivity_plus
